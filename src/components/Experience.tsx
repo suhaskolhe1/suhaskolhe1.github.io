@@ -1,8 +1,8 @@
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-16 md:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-12">Experience</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-8 md:mb-12">Experience</h2>
         
         <div className="relative border-l border-border pl-6 ml-2">
           {/* Timeline Dot */}

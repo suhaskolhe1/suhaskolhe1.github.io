@@ -27,9 +27,9 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="py-16 md:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-12">Technical Skills</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-8 md:mb-12">Technical Skills</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
           {skillCategories.map((category, idx) => (

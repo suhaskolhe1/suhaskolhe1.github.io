@@ -45,15 +45,15 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 bg-white/50 border-y border-border">
+    <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 bg-white/50 dark:bg-white/5 border-y border-border">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-12">Projects</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-8 md:mb-12">Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, idx) => (
             <div 
               key={idx} 
-              className="group flex flex-col p-6 rounded-2xl border border-border bg-background hover:-translate-y-1 hover:shadow-sm transition-all duration-300"
+              className="group flex flex-col p-5 sm:p-6 rounded-2xl border border-border bg-background hover:-translate-y-1 hover:shadow-sm transition-all duration-300"
             >
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {project.title}

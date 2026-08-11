@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './icons';
+import { GithubIcon, LinkedinIcon, SunIcon, MoonIcon } from './icons';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,6 +13,27 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Dark mode logic
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -60,7 +81,7 @@ export default function Navbar() {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com/in/suhas-kolhe" 
+              href="https://www.linkedin.com/in/suhaskolhe1/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
@@ -69,6 +90,15 @@ export default function Navbar() {
               <span className="sr-only">LinkedIn</span>
             </a>
           </div>
+          
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-muted hover:text-foreground transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {isDarkMode ? <SunIcon className="w-5 h-5" /> : <MoonIcon className="w-5 h-5" />}
+          </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -104,12 +134,19 @@ export default function Navbar() {
                 <GithubIcon className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com/in/suhas-kolhe" 
+                href="https://www.linkedin.com/in/suhaskolhe1/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <LinkedinIcon className="w-5 h-5" />
               </a>
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 ml-auto rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-muted hover:text-foreground transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? <SunIcon className="w-5 h-5" /> : <MoonIcon className="w-5 h-5" />}
+              </button>
             </li>
           </ul>
         </div>
