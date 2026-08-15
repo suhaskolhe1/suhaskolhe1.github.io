@@ -1,20 +1,32 @@
 export default function Skills() {
   const skillCategories = [
     {
-      name: "Android Development",
-      skills: "Kotlin · Jetpack Compose · Android SDK · Modern Android Architecture"
+      name: "Languages",
+      skills: "Kotlin, Java, Python, SQL, Bash, JavaScript"
     },
     {
-      name: "Databases & DI",
-      skills: "Room · Firebase · Koin · SQLite"
+      name: "Android",
+      skills: "Android SDK, Jetpack Compose, Android Architecture Components, Navigation, ViewModel, Room, WorkManager, Coroutines, Flow, Material Design"
     },
     {
-      name: "Backend & Web",
-      skills: "Node.js · Express.js · REST APIs · HTML/CSS"
+      name: "Architecture & Development",
+      skills: "MVVM, Clean Architecture, Modularization, Dependency Injection, Koin, REST APIs, Retrofit, Repository Pattern"
     },
     {
-      name: "Tools & DevOps",
-      skills: "Git · GitHub · AWS · Docker"
+      name: "Testing",
+      skills: "JUnit, Mockito, MockK, Unit Testing, Instrumentation Testing"
+    },
+    {
+      name: "CI/CD & Tools",
+      skills: "Git, GitHub, GitHub Actions, Jenkins, Docker, Linux, Android Studio, Gradle"
+    },
+    {
+      name: "Backend & Database",
+      skills: "Node.js, Express.js, FastAPI, PostgreSQL, MongoDB"
+    },
+    {
+      name: "Cloud",
+      skills: "AWS, Firebase"
     }
   ];
 
