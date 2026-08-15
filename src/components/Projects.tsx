@@ -1,4 +1,5 @@
 import { GithubIcon } from './icons';
+import { ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
@@ -14,33 +15,35 @@ export default function Projects() {
         "Payments and wallet systems",
         "Real-time service tracking",
       ],
-      github: "https://github.com/suhaskolhe1"
+      link: "https://github.com/suhaskolhe1",
+      linkText: "GitHub",
+      icon: "github"
     },
     {
-      title: "End-to-End E-Commerce Data Warehouse & ETL Pipeline",
-      description: "Scalable data pipeline for processing and transforming large-scale transaction data.",
-      tech: "Python · PySpark · AWS S3 · Snowflake · SQL · GitHub Actions · Pytest",
+      title: "Status Saver",
+      description: "Android application developed and published on the Play Store.",
+      tech: "Kotlin · Jetpack Compose · Android Architecture · Play Store",
       highlights: [
-        "Processed 100K+ daily transactions",
-        "Parquet-based data processing",
-        "Star schema warehouse design",
-        "Automated CI/CD and testing",
+        "Android application development",
+        "Modern Android architecture",
+        "Play Store publishing"
       ],
-      github: "https://github.com/suhaskolhe1"
+      link: "https://play.google.com/store/apps/details?id=com.sk.saver",
+      linkText: "View on Google Play",
+      icon: "external"
     },
     {
-      title: "Financial Market Data Integration Pipeline",
-      description: "Data engineering pipeline for collecting, transforming, and integrating financial market data.",
-      tech: "Python · PySpark · AWS S3 · Snowflake · REST APIs · GitHub Actions",
-      highlights: [],
-      github: "https://github.com/suhaskolhe1"
-    },
-    {
-      title: "AI-Powered Backend / Chatbot SaaS",
-      description: "Backend system integrating LLMs and APIs to build AI-powered workflows.",
-      tech: "FastAPI · Python · Ollama · Gemini · OpenAI API · RAG",
-      highlights: [],
-      github: "https://github.com/suhaskolhe1"
+      title: "Aurveda",
+      description: "Major Android application project built with modern Android practices.",
+      tech: "Kotlin · Jetpack Compose · Room · Koin · Android SDK",
+      highlights: [
+        "Modern Android development",
+        "Clean architecture",
+        "Jetpack Compose UI"
+      ],
+      link: "https://github.com/suhaskolhe1/aurveda-app",
+      linkText: "View on GitHub",
+      icon: "github"
     }
   ];
 
@@ -79,13 +82,13 @@ export default function Projects() {
 
               <div className="mt-auto pt-4 flex gap-4 border-t border-border/50">
                 <a 
-                  href={project.github} 
+                  href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-foreground transition-colors"
                 >
-                  <GithubIcon className="w-4 h-4" />
-                  GitHub
+                  {project.icon === 'github' ? <GithubIcon className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
+                  {project.linkText}
                 </a>
               </div>
             </div>

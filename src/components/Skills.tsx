@@ -1,28 +1,20 @@
 export default function Skills() {
   const skillCategories = [
     {
-      name: "Languages",
-      skills: "Python · JavaScript · Kotlin · SQL"
+      name: "Android Development",
+      skills: "Kotlin · Jetpack Compose · Android SDK · Modern Android Architecture"
     },
     {
-      name: "Backend",
-      skills: "Node.js · Express.js · FastAPI · REST APIs"
+      name: "Databases & DI",
+      skills: "Room · Firebase · Koin · SQLite"
     },
     {
-      name: "Databases",
-      skills: "MongoDB · PostgreSQL · MySQL · Redis"
+      name: "Backend & Web",
+      skills: "Node.js · Express.js · REST APIs · HTML/CSS"
     },
     {
-      name: "Cloud & DevOps",
-      skills: "AWS · Docker · Git · GitHub Actions · Linux"
-    },
-    {
-      name: "AI & Data",
-      skills: "PySpark · LangChain · LangGraph · ChromaDB · Ollama · RAG"
-    },
-    {
-      name: "Architecture & Security",
-      skills: "JWT · RBAC · Microservices · API Security · Swagger/OpenAPI"
+      name: "Tools & DevOps",
+      skills: "Git · GitHub · AWS · Docker"
     }
   ];
 

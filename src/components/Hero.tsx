@@ -19,12 +19,12 @@ export default function Hero() {
           Suhas Kolhe
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl text-muted font-medium tracking-tight mb-6 md:mb-8 max-w-2xl">
-          Backend Developer <br className="md:hidden" />
+          Android Developer <br className="md:hidden" />
           <span className="hidden md:inline"> &middot; </span>
           Computer Science Student
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl leading-relaxed mb-8 md:mb-12">
-          Computer Science student and aspiring Backend Developer with hands-on experience in Node.js, FastAPI, MongoDB, and PostgreSQL. Built REST APIs and AI-powered applications through internships and projects.
+          Computer Science student and Android Developer with hands-on experience in building modern Android applications using Kotlin, Jetpack Compose, and modern Android architecture.
         </p>
         
         <div className="flex flex-wrap gap-3 sm:gap-4 items-center">
