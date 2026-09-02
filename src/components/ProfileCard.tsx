@@ -30,12 +30,12 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl bg-slate-900/60 backdrop-blur-xl border-0 sm:border sm:border-white/10 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col h-screen sm:h-auto sm:max-h-[85vh]">
+    <div className="w-full max-w-2xl bg-slate-900/60 backdrop-blur-xl border-0 sm:border sm:border-white/10 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col h-screen sm:h-auto sm:max-h-[85vh] animate-fade-in-up">
       {/* Scrollable Content */}
       <div className="overflow-y-auto px-6 py-8 sm:px-12 sm:py-10 custom-scrollbar">
         
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-sm mb-6">
             <img 
               src="/profile.jpg" 
@@ -120,10 +120,10 @@ const ProfileCard = () => {
         </div>
 
         {/* Divider */}
-        <hr className="border-white/20 mb-8" />
+        <hr className="border-white/20 mb-8 animate-fade-in-up" style={{ animationDelay: '200ms' }} />
 
         {/* Experience Section */}
-        <div className="mb-10">
+        <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4">Experience</h3>
           <div className="mb-4">
             <div className="flex justify-between items-baseline mb-1">
@@ -140,7 +140,7 @@ const ProfileCard = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mb-10">
+        <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4">Skills</h3>
           <div className="space-y-4">
             <div>
@@ -187,7 +187,7 @@ const ProfileCard = () => {
         </div>
 
         {/* Projects Section */}
-        <div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '500ms' }}>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4">Projects</h3>
           
           <div className="space-y-6">
