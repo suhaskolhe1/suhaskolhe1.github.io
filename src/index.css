@@ -1,45 +1,51 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  --color-background: #FAFAFA;
-  --color-foreground: #1A1A1A;
-  --color-muted: #737373;
-  --color-border: #E5E5E5;
-  --color-accent: #2563EB;
+  --color-navy: #0a192f;
+  --color-light-navy: #112240;
+  --color-lightest-navy: #233554;
+  --color-slate: #8892b0;
+  --color-light-slate: #a8b2d1;
+  --color-lightest-slate: #ccd6f6;
+  --color-white: #e6f1ff;
+  --color-green: #64ffda;
+  --color-green-tint: rgba(100, 255, 218, 0.1);
 }
 
 @layer base {
-  .dark {
-    --color-background: #09090b; /* zinc-950 */
-    --color-foreground: #fafafa; /* zinc-50 */
-    --color-muted: #a1a1aa; /* zinc-400 */
-    --color-border: #27272a; /* zinc-800 */
-    --color-accent: #ffffff;
-  }
-  
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: #0f172a; /* tailwind slate-900 */
+    color: #94a3b8; /* tailwind slate-400 */
     font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e2e8f0; /* tailwind slate-200 */
+    font-weight: 700;
+  }
+
+  a {
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #5eead4; /* tailwind teal-300 */
   }
 }
 
 @layer utilities {
-  .glass {
-    background-color: rgba(250, 250, 250, 0.7);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-border);
+  .text-highlight {
+    color: #e2e8f0;
   }
-  .dark .glass {
-    background-color: rgba(9, 9, 11, 0.7);
+  .text-accent {
+    color: #5eead4;
   }
 }
 
@@ -53,10 +59,34 @@
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #E5E5E5; 
+  background: #334155; 
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A3A3A3; 
+  background: #475569; 
+}
+
+/* Loader Animation */
+.loader-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-hex 2s ease-in-out forwards;
+}
+
+.loader-text {
+  opacity: 0;
+  animation: fade-in-s 0.5s ease-in-out 1.5s forwards;
+}
+
+@keyframes draw-hex {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in-s {
+  to {
+    opacity: 1;
+  }
 }
