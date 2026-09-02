@@ -1,27 +1,13 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background font-sans selection:bg-foreground selection:text-background">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="h-screen w-screen overflow-hidden font-sans flex items-center justify-center p-0 sm:p-4 md:p-8 relative bg-[url('/background.png')] bg-cover bg-center">
+      
+      {/* Foreground Content */}
+      <div className="relative w-full flex justify-center z-10">
+        <ProfileCard />
+      </div>
     </div>
   );
 }
